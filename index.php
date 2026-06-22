@@ -1,0 +1,2672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aura Wellness LV — Advanced Medical Aesthetics & Luxury Wellness in Las Vegas & Reno. Botox, Fillers, PDO Threads, IV Therapy, Medical Weight Loss & more.">
+<meta name="keywords" content="medical aesthetics Las Vegas, botox Las Vegas, dermal fillers, medical spa, wellness clinic, luxury aesthetics">
+<title>Aura Wellness LV | Luxury Medical Aesthetics & Wellness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF8F5;
+    --warm-white: #FFFFFF;
+    --champagne: #C9A96E;
+    --champagne-light: #E8D5B0;
+    --champagne-pale: #F5EDD9;
+    --gold: #B8973A;
+    --gold-deep: #9A7A28;
+    --nude: #E8D5C4;
+    --nude-dark: #C4A882;
+    --charcoal: #2C2825;
+    --text-dark: #1A1714;
+    --text-mid: #5C5047;
+    --text-light: #9B8E83;
+    --glass: rgba(255,255,255,0.72);
+    --glass-border: rgba(201,169,110,0.25);
+    --shadow-gold: 0 4px 32px rgba(184,151,58,0.15);
+    --shadow-soft: 0 8px 40px rgba(44,40,37,0.08);
+    --shadow-hover: 0 20px 60px rgba(44,40,37,0.15);
+    --radius: 2px;
+    --radius-lg: 4px;
+    --serif: 'Cormorant Garamond', serif;
+    --sans: 'Jost', sans-serif;
+    --script: 'Great Vibes', cursive;
+    --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  /* ─── SCROLLBAR ─── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--cream); }
+  ::-webkit-scrollbar-thumb { background: var(--champagne); border-radius: 2px; }
+
+  /* ─── UTILITIES ─── */
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+  .container-wide { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+  @media (max-width: 768px) { .container, .container-wide { padding: 0 20px; } }
+
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--champagne);
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+  }
+
+  .section-title em { font-style: italic; color: var(--champagne); }
+
+  .section-subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--text-mid);
+    max-width: 560px;
+    line-height: 1.8;
+  }
+
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 36px;
+    background: linear-gradient(135deg, var(--champagne) 0%, var(--gold) 100%);
+    color: #fff;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-gold::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+    opacity: 0;
+    transition: var(--transition);
+  }
+
+  .btn-gold:hover::before { opacity: 1; }
+  .btn-gold span { position: relative; z-index: 1; }
+  .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(184,151,58,0.4); }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 35px;
+    background: transparent;
+    color: var(--warm-white);
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .btn-outline:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.8);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 35px;
+    background: transparent;
+    color: var(--champagne);
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--champagne);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .btn-outline-dark:hover {
+    background: var(--champagne);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  /* ─── SCROLL REVEAL ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal-left.visible { opacity: 1; transform: translateX(0); }
+
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+  /* ─── HEADER ─── */
+  #header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: var(--transition);
+  }
+
+  #header.scrolled {
+    background: rgba(250,248,245,0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 14px 0;
+    box-shadow: 0 1px 0 rgba(201,169,110,0.2);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .logo-script {
+    font-family: var(--script);
+    font-size: 2rem;
+    color: var(--champagne);
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+
+  .logo-sub {
+    font-family: var(--sans);
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-top: 2px;
+  }
+
+  .logo-script-white { color: #fff; }
+  .logo-sub-white { color: rgba(255,255,255,0.6); }
+
+  nav { display: flex; align-items: center; gap: 0; }
+
+  nav a {
+    font-family: var(--sans);
+    font-size: 11.5px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 6px 14px;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+
+  nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%; right: 50%;
+    height: 1px;
+    background: var(--champagne);
+    transition: var(--transition);
+  }
+
+  nav a:hover { color: var(--champagne); }
+  nav a:hover::after { left: 14px; right: 14px; }
+
+  .nav-white a { color: rgba(255,255,255,0.85); }
+  .nav-white a:hover { color: #fff; }
+
+  .header-cta { flex-shrink: 0; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: var(--champagne);
+    transition: var(--transition);
+  }
+
+  /* ─── HERO ─── */
+  #hero {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: 
+      linear-gradient(135deg, rgba(26,23,20,0.72) 0%, rgba(44,40,37,0.5) 50%, rgba(26,23,20,0.65) 100%),
+      url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1920&q=90&auto=format&fit=crop') center center / cover no-repeat;
+    transform: scale(1.05);
+    transition: transform 8s ease;
+  }
+
+  .hero-bg.loaded { transform: scale(1); }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+  }
+
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .hero-eyebrow-line {
+    width: 40px;
+    height: 1px;
+    background: var(--champagne);
+  }
+
+  .hero-eyebrow-text {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--champagne-light);
+  }
+
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 24px;
+  }
+
+  .hero-title em { font-style: italic; color: var(--champagne-light); }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.78);
+    margin-bottom: 48px;
+    max-width: 520px;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .hero-scroll-text {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .hero-scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(201,169,110,0.8), transparent);
+    animation: scrollBounce 2s ease infinite;
+  }
+
+  @keyframes scrollBounce {
+    0%, 100% { transform: scaleY(1); opacity: 0.8; }
+    50% { transform: scaleY(0.6); opacity: 0.3; }
+  }
+
+  /* ─── TRUST BAR ─── */
+  #trust {
+    background: var(--charcoal);
+    padding: 48px 0;
+  }
+
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+  }
+
+  @media (max-width: 900px) { .trust-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 560px) { .trust-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px 20px;
+    border-right: 1px solid rgba(201,169,110,0.15);
+  }
+
+  .trust-item:last-child { border-right: none; }
+
+  .trust-number {
+    font-family: var(--serif);
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--champagne);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .trust-label {
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .trust-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 12px;
+    opacity: 0.7;
+  }
+
+  /* ─── ABOUT ─── */
+  #about {
+    padding: 120px 0;
+    background: var(--warm-white);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+  .about-img-wrap {
+    position: relative;
+  }
+
+  .about-img-main {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    display: block;
+  }
+
+  .about-img-accent {
+    position: absolute;
+    bottom: -32px;
+    right: -32px;
+    width: 45%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 6px solid var(--warm-white);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .about-badge {
+    position: absolute;
+    top: 32px;
+    left: -24px;
+    background: var(--charcoal);
+    color: #fff;
+    padding: 20px 24px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .about-badge-num {
+    font-family: var(--serif);
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: var(--champagne);
+    display: block;
+    line-height: 1;
+  }
+
+  .about-badge-txt {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-top: 4px;
+    display: block;
+  }
+
+  .about-content { padding: 20px 0; }
+
+  .about-story {
+    font-size: 1rem;
+    color: var(--text-mid);
+    line-height: 1.9;
+    margin-bottom: 32px;
+  }
+
+  .about-pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .about-pillar {
+    padding: 20px;
+    background: var(--cream);
+    border-left: 2px solid var(--champagne);
+  }
+
+  .about-pillar-title {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+  }
+
+  .about-pillar-text {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  /* ─── SERVICES ─── */
+  #services {
+    padding: 120px 0;
+    background: var(--cream);
+  }
+
+  .services-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .services-header .section-subtitle {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .service-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 2px;
+    overflow: hidden;
+    min-height: 520px;
+  }
+
+  .service-block:nth-child(even) { direction: rtl; }
+  .service-block:nth-child(even) > * { direction: ltr; }
+
+  .service-img {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+    display: block;
+  }
+
+  .service-block:hover .service-img img { transform: scale(1.05); }
+
+  .service-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, transparent 60%, rgba(250,248,245,0.3));
+    pointer-events: none;
+  }
+
+  .service-content {
+    background: var(--warm-white);
+    padding: 64px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .service-number {
+    font-family: var(--serif);
+    font-size: 5rem;
+    font-weight: 300;
+    color: var(--champagne-light);
+    line-height: 1;
+    margin-bottom: -8px;
+  }
+
+  .service-title {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+  }
+
+  .service-desc {
+    font-size: 0.95rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+
+  .service-benefits {
+    list-style: none;
+    margin-bottom: 36px;
+  }
+
+  .service-benefits li {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--champagne-pale);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .service-benefits li::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: var(--champagne);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 900px) {
+    .service-block { grid-template-columns: 1fr; direction: ltr !important; min-height: auto; }
+    .service-block:nth-child(even) { direction: ltr; }
+    .service-img { height: 300px; }
+    .service-content { padding: 40px 28px; }
+  }
+
+  /* ─── GALLERY ─── */
+  #gallery {
+    padding: 120px 0;
+    background: var(--charcoal);
+  }
+
+  .gallery-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .gallery-header .section-title { color: #fff; }
+  .gallery-header .section-subtitle { color: rgba(255,255,255,0.55); margin: 0 auto; text-align: center; }
+
+  .gallery-grid {
+    columns: 4;
+    column-gap: 4px;
+  }
+
+  @media (max-width: 900px) { .gallery-grid { columns: 2; } }
+  @media (max-width: 480px) { .gallery-grid { columns: 1; } }
+
+  .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 4px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .gallery-item:hover img { transform: scale(1.06); }
+
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(26,23,20,0.8) 0%, transparent 50%);
+    opacity: 0;
+    transition: var(--transition);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+  }
+
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+  .gallery-overlay-text {
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.9);
+    font-style: italic;
+  }
+
+  /* ─── WHY CHOOSE US ─── */
+  #why {
+    padding: 120px 0;
+    background: var(--warm-white);
+  }
+
+  .why-header {
+    text-align: center;
+    margin-bottom: 72px;
+  }
+
+  .why-header .section-subtitle { margin: 0 auto; text-align: center; }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  @media (max-width: 900px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .why-grid { grid-template-columns: 1fr; } }
+
+  .why-card {
+    background: var(--cream);
+    padding: 48px 36px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .why-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--champagne), var(--gold));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition);
+  }
+
+  .why-card:hover { background: var(--warm-white); box-shadow: var(--shadow-hover); transform: translateY(-4px); }
+  .why-card:hover::before { transform: scaleX(1); }
+
+  .why-icon {
+    width: 52px;
+    height: 52px;
+    background: var(--champagne-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .why-icon svg { width: 24px; height: 24px; color: var(--champagne); }
+
+  .why-card-title {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+  }
+
+  .why-card-text {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.8;
+  }
+
+  /* ─── LOCATIONS ─── */
+  #locations {
+    padding: 120px 0;
+    background: var(--cream);
+  }
+
+  .locations-header {
+    text-align: center;
+    margin-bottom: 72px;
+  }
+
+  .locations-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  @media (max-width: 900px) { .locations-grid { grid-template-columns: 1fr; } }
+
+  .location-card {
+    background: var(--warm-white);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+  }
+
+  .location-card:hover { box-shadow: var(--shadow-hover); }
+
+  .location-map {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(30%) sepia(10%);
+  }
+
+  .location-map iframe {
+    width: 100%;
+    height: 260px;
+    border: none;
+    display: block;
+    filter: grayscale(30%) sepia(10%);
+  }
+
+  .location-body { padding: 36px; }
+
+  .location-name {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+  }
+
+  .location-details { list-style: none; margin-bottom: 28px; }
+
+  .location-details li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--champagne-pale);
+    font-size: 0.9rem;
+    color: var(--text-mid);
+  }
+
+  .location-details li svg {
+    width: 16px;
+    height: 16px;
+    color: var(--champagne);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ─── FEATURED TREATMENTS ─── */
+  #treatments {
+    padding: 120px 0;
+    background: var(--charcoal);
+  }
+
+  .treatments-header {
+    text-align: center;
+    margin-bottom: 72px;
+  }
+
+  .treatments-header .section-title { color: #fff; }
+  .treatments-header .section-subtitle { color: rgba(255,255,255,0.55); margin: 0 auto; text-align: center; }
+
+  .treatments-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  @media (max-width: 900px) { .treatments-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .treatments-grid { grid-template-columns: 1fr; } }
+
+  .treatment-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,169,110,0.15);
+    padding: 40px 32px;
+    transition: var(--transition);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .treatment-card:hover {
+    background: rgba(201,169,110,0.08);
+    border-color: rgba(201,169,110,0.4);
+    transform: translateY(-4px);
+  }
+
+  .treatment-card-name {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .treatment-card-desc {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+
+  .treatment-price-label {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--champagne);
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .treatment-price {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--champagne-light);
+    display: block;
+    margin-bottom: 28px;
+  }
+
+  /* ─── TESTIMONIALS ─── */
+  #testimonials {
+    padding: 120px 0;
+    background: var(--warm-white);
+  }
+
+  .testimonials-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .testimonials-header .section-subtitle { margin: 0 auto; text-align: center; }
+
+  .testimonials-track-wrap { overflow: hidden; position: relative; }
+
+  .testimonials-track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .testimonial-card {
+    background: var(--cream);
+    padding: 48px 40px;
+    flex: 0 0 calc(33.333% - 16px);
+    min-width: 320px;
+    position: relative;
+  }
+
+  @media (max-width: 900px) { .testimonial-card { flex: 0 0 calc(50% - 12px); } }
+  @media (max-width: 600px) { .testimonial-card { flex: 0 0 calc(100%); } }
+
+  .testimonial-stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 24px;
+  }
+
+  .star { color: var(--champagne); font-size: 1rem; }
+
+  .testimonial-quote {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--text-dark);
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+
+  .testimonial-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--champagne);
+    margin-bottom: 20px;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--champagne-light);
+  }
+
+  .testimonial-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    letter-spacing: 0.05em;
+  }
+
+  .testimonial-location {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 2px;
+  }
+
+  .testimonials-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  .testimonials-btn {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--champagne);
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    color: var(--champagne);
+  }
+
+  .testimonials-btn:hover { background: var(--champagne); color: #fff; }
+  .testimonials-btn svg { width: 18px; height: 18px; }
+
+  .testimonials-dots { display: flex; gap: 8px; }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--champagne-light);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .dot.active { background: var(--champagne); width: 24px; border-radius: 3px; }
+
+  /* ─── PROCESS ─── */
+  #process {
+    padding: 120px 0;
+    background: var(--cream);
+  }
+
+  .process-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .process-header .section-subtitle { margin: 0 auto; text-align: center; }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+  }
+
+  .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: calc(12.5% + 20px);
+    right: calc(12.5% + 20px);
+    height: 1px;
+    background: linear-gradient(90deg, var(--champagne), var(--champagne-light), var(--champagne));
+  }
+
+  @media (max-width: 900px) {
+    .process-steps { grid-template-columns: repeat(2, 1fr); gap: 48px; }
+    .process-steps::before { display: none; }
+  }
+
+  @media (max-width: 560px) { .process-steps { grid-template-columns: 1fr; } }
+
+  .process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 24px;
+  }
+
+  .process-step-num {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--warm-white);
+    border: 1px solid var(--champagne);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--champagne);
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+  }
+
+  .process-step-title {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+  }
+
+  .process-step-text {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    line-height: 1.8;
+  }
+
+  /* ─── CTA BANNER ─── */
+  #cta-banner {
+    position: relative;
+    padding: 140px 0;
+    overflow: hidden;
+  }
+
+  .cta-banner-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(135deg, rgba(26,23,20,0.85) 0%, rgba(44,40,37,0.7) 100%),
+      url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1920&q=80&auto=format&fit=crop') center / cover no-repeat;
+  }
+
+  .cta-banner-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .cta-banner-title {
+    font-family: var(--serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .cta-banner-title em { font-style: italic; color: var(--champagne-light); }
+
+  .cta-banner-sub {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 48px;
+    line-height: 1.8;
+  }
+
+  /* ─── FAQ ─── */
+  #faq {
+    padding: 120px 0;
+    background: var(--warm-white);
+  }
+
+  .faq-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .faq-header .section-subtitle { margin: 0 auto; text-align: center; }
+
+  .faq-list { max-width: 800px; margin: 0 auto; }
+
+  .faq-item {
+    border-bottom: 1px solid var(--champagne-pale);
+    overflow: hidden;
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    cursor: pointer;
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    gap: 16px;
+    transition: color 0.3s ease;
+  }
+
+  .faq-question:hover { color: var(--champagne); }
+
+  .faq-icon {
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--champagne);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--champagne);
+    font-size: 1.2rem;
+    transition: var(--transition);
+  }
+
+  .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--champagne); color: #fff; }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+  }
+
+  .faq-item.open .faq-answer { max-height: 300px; }
+
+  .faq-answer-inner {
+    padding: 0 0 24px;
+    font-size: 0.95rem;
+    color: var(--text-mid);
+    line-height: 1.85;
+  }
+
+  /* ─── CONTACT ─── */
+  #contact {
+    padding: 120px 0;
+    background: var(--cream);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+  .contact-img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    display: block;
+  }
+
+  .contact-form-title {
+    font-family: var(--serif);
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+  }
+
+  .contact-form-sub {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    line-height: 1.8;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--champagne);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--warm-white);
+    border: 1px solid var(--champagne-pale);
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--text-dark);
+    outline: none;
+    transition: border-color 0.3s ease;
+    -webkit-appearance: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--champagne);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 120px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* ─── INSTAGRAM ─── */
+  #instagram {
+    padding: 80px 0;
+    background: var(--warm-white);
+  }
+
+  .instagram-header { text-align: center; margin-bottom: 48px; }
+
+  .instagram-handle {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--champagne);
+    margin-top: 8px;
+  }
+
+  .instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+  }
+
+  @media (max-width: 900px) { .instagram-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 480px) { .instagram-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  .instagram-item {
+    aspect-ratio: 1;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .instagram-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    display: block;
+  }
+
+  .instagram-item:hover img { transform: scale(1.1); }
+
+  .instagram-item-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(201,169,110,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+  }
+
+  .instagram-item:hover .instagram-item-overlay { opacity: 1; }
+
+  .instagram-item-overlay svg {
+    width: 28px;
+    height: 28px;
+    color: #fff;
+  }
+
+  /* ─── FOOTER ─── */
+  #footer {
+    background: var(--text-dark);
+    padding: 80px 0 0;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+    gap: 48px;
+    padding-bottom: 64px;
+    border-bottom: 1px solid rgba(201,169,110,0.15);
+  }
+
+  @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; } }
+
+  .footer-logo-script {
+    font-family: var(--script);
+    font-size: 1.8rem;
+    color: var(--champagne);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .footer-logo-sub {
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .footer-desc {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.8;
+    margin-bottom: 28px;
+  }
+
+  .footer-socials { display: flex; gap: 12px; }
+
+  .footer-social {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(201,169,110,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .footer-social:hover {
+    border-color: var(--champagne);
+    color: var(--champagne);
+    background: rgba(201,169,110,0.1);
+  }
+
+  .footer-social svg { width: 16px; height: 16px; }
+
+  .footer-col-title {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--champagne);
+    margin-bottom: 24px;
+  }
+
+  .footer-links { list-style: none; }
+
+  .footer-links li { margin-bottom: 10px; }
+
+  .footer-links a {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .footer-links a:hover { color: var(--champagne); }
+
+  .footer-links a::before {
+    content: '';
+    width: 12px;
+    height: 1px;
+    background: var(--champagne);
+    flex-shrink: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .footer-links a:hover::before { opacity: 1; }
+
+  .footer-contact-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.45);
+    align-items: flex-start;
+  }
+
+  .footer-contact-item svg {
+    width: 16px;
+    height: 16px;
+    color: var(--champagne);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .footer-bottom {
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .footer-copyright {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 0.05em;
+  }
+
+  .footer-legal { display: flex; gap: 24px; }
+
+  .footer-legal a {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.25);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-legal a:hover { color: var(--champagne); }
+
+  /* ─── MOBILE NAV ─── */
+  .mobile-nav {
+    position: fixed;
+    inset: 0;
+    background: rgba(26,23,20,0.98);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .mobile-nav.open { transform: translateX(0); }
+
+  .mobile-nav a {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    padding: 12px;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-nav a:hover { color: var(--champagne); }
+
+  .mobile-nav-close {
+    position: absolute;
+    top: 24px; right: 24px;
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.5);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  /* ─── RESPONSIVE NAV ─── */
+  @media (max-width: 1100px) { nav { display: none; } }
+
+  @media (max-width: 1100px) {
+    .hamburger { display: flex; }
+  }
+
+  /* ─── SECTION DIVIDER ─── */
+  .gold-divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--champagne), transparent);
+    margin: 20px auto;
+  }
+
+  /* ─── LIGHTBOX ─── */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(10,8,6,0.95);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+
+  .lightbox.open { opacity: 1; pointer-events: all; }
+
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    box-shadow: 0 0 80px rgba(0,0,0,0.8);
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 24px; right: 24px;
+    background: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.6);
+    font-size: 1.2rem;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .lightbox-close:hover { border-color: var(--champagne); color: var(--champagne); }
+</style>
+</head>
+<body>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" onclick="closeMobileNav()">✕</button>
+  <a href="#about" onclick="closeMobileNav()">About</a>
+  <a href="#services" onclick="closeMobileNav()">Services</a>
+  <a href="#treatments" onclick="closeMobileNav()">Treatments</a>
+  <a href="#locations" onclick="closeMobileNav()">Locations</a>
+  <a href="#testimonials" onclick="closeMobileNav()">Testimonials</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  <a href="#contact" onclick="closeMobileNav()" class="btn-gold" style="margin-top:16px;font-size:12px;"><span>Book Consultation</span></a>
+</div>
+
+<!-- ═══════════════════════════════════════════ HEADER -->
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-script logo-script-white" id="logoScript">Aura Wellness LV</span>
+        <span class="logo-sub logo-sub-white" id="logoSub">Medical Aesthetics & Wellness</span>
+      </a>
+
+      <nav id="mainNav" class="nav-white">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#treatments">Medical Aesthetics</a>
+        <a href="#treatments">Wellness</a>
+        <a href="#treatments">Weight Loss</a>
+        <a href="#locations">Locations</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#contact" class="btn-gold header-cta" style="display:none;" id="headerCTA">
+        <span>Book Consultation</span>
+      </a>
+
+      <button class="hamburger" onclick="openMobileNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════ HERO -->
+<section id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        <span class="hero-eyebrow-text">Las Vegas & Reno's Premier Medical Spa</span>
+      </div>
+      <h1 class="hero-title">
+        Elevate Your<br>
+        Beauty &amp; <em>Wellness</em><br>
+        Journey
+      </h1>
+      <p class="hero-subtitle">Advanced Medical Aesthetics, Wellness Treatments &amp; Personalized Care — crafted for those who demand the finest.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-gold"><span>Book Appointment</span></a>
+        <a href="#services" class="btn-outline">Explore Services</a>
+      </div>
+    </div>
+  </div>
+  <a href="#trust" class="hero-scroll">
+    <span class="hero-scroll-text">Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </a>
+</section>
+
+<!-- ═══════════════════════════════════════════ TRUST BAR -->
+<section id="trust">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item reveal">
+        <span class="trust-number">10+</span>
+        <span class="trust-label">Years Experience</span>
+      </div>
+      <div class="trust-item reveal" style="transition-delay:0.1s">
+        <span class="trust-number">5,000+</span>
+        <span class="trust-label">Happy Clients</span>
+      </div>
+      <div class="trust-item reveal" style="transition-delay:0.2s">
+        <span class="trust-number">100%</span>
+        <span class="trust-label">Certified Professionals</span>
+      </div>
+      <div class="trust-item reveal" style="transition-delay:0.3s">
+        <span class="trust-number">FDA</span>
+        <span class="trust-label">Approved Procedures</span>
+      </div>
+      <div class="trust-item reveal" style="transition-delay:0.4s">
+        <span class="trust-number">★★★★★</span>
+        <span class="trust-label">Luxury Care Experience</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal-left">
+        <img class="about-img-main" src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&q=85&auto=format&fit=crop" alt="Aura Wellness Clinic Interior" loading="lazy">
+        <img class="about-img-accent" src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=400&q=85&auto=format&fit=crop" alt="Luxury Treatment Room" loading="lazy">
+        <div class="about-badge">
+          <span class="about-badge-num">10+</span>
+          <span class="about-badge-txt">Years of Excellence</span>
+        </div>
+      </div>
+
+      <div class="about-content reveal-right">
+        <span class="eyebrow">Our Story</span>
+        <h2 class="section-title">Where <em>Science</em> Meets Luxury Beauty</h2>
+        <p class="about-story">Founded on the belief that beauty enhancement should feel as exceptional as the results it delivers, Aura Wellness LV was born in the heart of Las Vegas — a city that celebrates the extraordinary. Our clinic brings together board-certified practitioners, cutting-edge technology, and a deeply personalized approach to help you look and feel your absolute best.</p>
+        <p class="about-story" style="margin-top: -8px;">Every treatment begins with a thorough consultation. We listen, understand your goals, and craft a bespoke plan that honors your natural beauty while delivering transformative results.</p>
+
+        <div class="about-pillars">
+          <div class="about-pillar">
+            <div class="about-pillar-title">Our Mission</div>
+            <div class="about-pillar-text">To provide world-class aesthetic medicine in an environment of unparalleled luxury and care.</div>
+          </div>
+          <div class="about-pillar">
+            <div class="about-pillar-title">Our Vision</div>
+            <div class="about-pillar-text">To be the Southwest's most trusted destination for beauty, wellness, and aesthetic transformation.</div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn-gold"><span>Schedule a Consultation</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <span class="eyebrow">What We Offer</span>
+      <h2 class="section-title">Signature <em>Services</em></h2>
+      <div class="gold-divider"></div>
+      <p class="section-subtitle">From subtle enhancements to complete aesthetic transformations — our treatments are designed to reveal the most radiant version of you.</p>
+    </div>
+  </div>
+
+  <!-- Service 1 -->
+  <div class="service-block">
+    <div class="service-img">
+      <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=85&auto=format&fit=crop" alt="Botox Treatment" loading="lazy">
+      <div class="service-img-overlay"></div>
+    </div>
+    <div class="service-content">
+      <span class="service-number">01</span>
+      <h3 class="service-title">Botox & Neuromodulators</h3>
+      <p class="service-desc">Soften fine lines and dynamic wrinkles with precision-injected neuromodulators. Our expert injectors create naturally refreshed results that preserve your expressions while turning back time.</p>
+      <ul class="service-benefits">
+        <li>Forehead & frown line smoothing</li>
+        <li>Crow's feet reduction</li>
+        <li>Brow lift & eye area rejuvenation</li>
+        <li>Results visible in 3–7 days</li>
+      </ul>
+      <a href="#contact" class="btn-outline-dark">Book This Treatment</a>
+    </div>
+  </div>
+
+  <!-- Service 2 -->
+  <div class="service-block">
+    <div class="service-img">
+      <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=85&auto=format&fit=crop" alt="Dermal Fillers" loading="lazy">
+      <div class="service-img-overlay"></div>
+    </div>
+    <div class="service-content">
+      <span class="service-number">02</span>
+      <h3 class="service-title">Dermal Fillers</h3>
+      <p class="service-desc">Restore lost volume, sculpt facial contours, and achieve a naturally youthful appearance with our premium hyaluronic acid fillers. Artistry meets science in every syringe.</p>
+      <ul class="service-benefits">
+        <li>Cheek augmentation & contouring</li>
+        <li>Nasolabial fold softening</li>
+        <li>Jawline & chin definition</li>
+        <li>Immediate, long-lasting results</li>
+      </ul>
+      <a href="#contact" class="btn-outline-dark">Book This Treatment</a>
+    </div>
+  </div>
+
+  <!-- Service 3 -->
+  <div class="service-block">
+    <div class="service-img">
+      <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=85&auto=format&fit=crop" alt="PDO Threads" loading="lazy">
+      <div class="service-img-overlay"></div>
+    </div>
+    <div class="service-content">
+      <span class="service-number">03</span>
+      <h3 class="service-title">PDO Thread Lift</h3>
+      <p class="service-desc">Experience a non-surgical facelift that lifts, tightens, and rejuvenates sagging skin. PDO threads stimulate collagen production for results that continue improving over months.</p>
+      <ul class="service-benefits">
+        <li>Non-surgical skin lifting</li>
+        <li>Collagen stimulation</li>
+        <li>Minimal downtime</li>
+        <li>Results lasting 12–18 months</li>
+      </ul>
+      <a href="#contact" class="btn-outline-dark">Book This Treatment</a>
+    </div>
+  </div>
+
+  <!-- Service 4 -->
+  <div class="service-block">
+    <div class="service-img">
+      <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&q=85&auto=format&fit=crop" alt="Medical Weight Loss" loading="lazy">
+      <div class="service-img-overlay"></div>
+    </div>
+    <div class="service-content">
+      <span class="service-number">04</span>
+      <h3 class="service-title">Medical Weight Loss</h3>
+      <p class="service-desc">Our physician-supervised weight loss programs combine advanced medical protocols with personalized nutrition guidance and the latest FDA-approved medications for sustainable transformation.</p>
+      <ul class="service-benefits">
+        <li>Semaglutide & Tirzepatide programs</li>
+        <li>Comprehensive body composition analysis</li>
+        <li>Customized nutrition planning</li>
+        <li>Ongoing physician monitoring</li>
+      </ul>
+      <a href="#contact" class="btn-outline-dark">Book This Treatment</a>
+    </div>
+  </div>
+
+  <!-- Service 5 -->
+  <div class="service-block">
+    <div class="service-img">
+      <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=85&auto=format&fit=crop" alt="IV Therapy" loading="lazy">
+      <div class="service-img-overlay"></div>
+    </div>
+    <div class="service-content">
+      <span class="service-number">05</span>
+      <h3 class="service-title">IV Therapy & Wellness</h3>
+      <p class="service-desc">Replenish, rehydrate, and rejuvenate from the inside out with our bespoke IV vitamin infusions. Designed for peak performance, recovery, immunity, and radiant skin.</p>
+      <ul class="service-benefits">
+        <li>Beauty & anti-aging drips</li>
+        <li>Immunity & energy boosts</li>
+        <li>Hangover & recovery protocols</li>
+        <li>NAD+ longevity infusions</li>
+      </ul>
+      <a href="#contact" class="btn-outline-dark">Book This Treatment</a>
+    </div>
+  </div>
+
+  <!-- Service 6 -->
+  <div class="service-block">
+    <div class="service-img">
+      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&q=85&auto=format&fit=crop" alt="Skin Rejuvenation" loading="lazy">
+      <div class="service-img-overlay"></div>
+    </div>
+    <div class="service-content">
+      <span class="service-number">06</span>
+      <h3 class="service-title">Laser & Skin Rejuvenation</h3>
+      <p class="service-desc">Reveal luminous, even-toned skin with our suite of advanced laser treatments. From resurfacing to pigmentation correction, we address every skin concern with clinical precision.</p>
+      <ul class="service-benefits">
+        <li>IPL photofacial</li>
+        <li>Fractional laser resurfacing</li>
+        <li>Pigmentation & sun damage</li>
+        <li>Skin tightening & texture</li>
+      </ul>
+      <a href="#contact" class="btn-outline-dark">Book This Treatment</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <div class="gallery-header reveal">
+      <span class="eyebrow" style="color:var(--champagne-light)">Our Results</span>
+      <h2 class="section-title" style="color:#fff">Before &amp; After <em>Gallery</em></h2>
+      <div class="gold-divider"></div>
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.5);margin:0 auto;text-align:center">Real results from real clients. Each transformation is unique, tailored, and extraordinary.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1200&q=90&auto=format&fit=crop')">
+        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&q=80&auto=format&fit=crop" alt="Botox Result" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Botox & Neuromodulators</span></div>
+      </div>
+      <div class="gallery-item" style="margin-top:24px" onclick="openLightbox('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=90&auto=format&fit=crop')">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80&auto=format&fit=crop" alt="Filler Result" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Dermal Fillers</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1200&q=90&auto=format&fit=crop')">
+        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400&q=80&auto=format&fit=crop" alt="Thread Lift Result" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">PDO Thread Lift</span></div>
+      </div>
+      <div class="gallery-item" style="margin-top:24px" onclick="openLightbox('https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1200&q=90&auto=format&fit=crop')">
+        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&q=80&auto=format&fit=crop" alt="Skin Result" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Skin Rejuvenation</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1200&q=90&auto=format&fit=crop')">
+        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&q=80&auto=format&fit=crop" alt="Lip Filler Result" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Lip Enhancement</span></div>
+      </div>
+      <div class="gallery-item" style="margin-top:24px" onclick="openLightbox('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1200&q=90&auto=format&fit=crop')">
+        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=400&q=80&auto=format&fit=crop" alt="IV Therapy" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">IV Therapy</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1200&q=90&auto=format&fit=crop')">
+        <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=400&q=80&auto=format&fit=crop" alt="Laser Treatment" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Laser Treatments</span></div>
+      </div>
+      <div class="gallery-item" style="margin-top:24px" onclick="openLightbox('https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?w=1200&q=90&auto=format&fit=crop')">
+        <img src="https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?w=400&q=80&auto=format&fit=crop" alt="PRP Therapy" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-overlay-text">PRP Therapy</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ WHY CHOOSE US -->
+<section id="why">
+  <div class="container">
+    <div class="why-header reveal">
+      <span class="eyebrow">The Aura Difference</span>
+      <h2 class="section-title">Why Choose <em>Aura Wellness LV</em></h2>
+      <div class="gold-divider"></div>
+      <p class="section-subtitle">We don't just treat — we transform. Six pillars define the Aura experience.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="why-card-title">Expert Practitioners</div>
+        <div class="why-card-text">Our team of board-certified physicians, nurse practitioners, and aesthetic specialists bring decades of combined expertise to every treatment.</div>
+      </div>
+      <div class="why-card reveal" style="transition-delay:0.1s">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div class="why-card-title">Personalized Treatments</div>
+        <div class="why-card-text">No two clients are alike. Every treatment plan is custom-crafted based on your unique anatomy, goals, and lifestyle for optimal, natural results.</div>
+      </div>
+      <div class="why-card reveal" style="transition-delay:0.2s">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div class="why-card-title">FDA Approved Procedures</div>
+        <div class="why-card-text">We exclusively use FDA-cleared products and protocols, ensuring the highest standards of safety and efficacy for every client in our care.</div>
+      </div>
+      <div class="why-card reveal" style="transition-delay:0.1s">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg>
+        </div>
+        <div class="why-card-title">Cutting Edge Technology</div>
+        <div class="why-card-text">We invest in the most advanced aesthetic devices and techniques, staying at the forefront of medical aesthetics to deliver superior outcomes.</div>
+      </div>
+      <div class="why-card reveal" style="transition-delay:0.2s">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="why-card-title">Luxury Environment</div>
+        <div class="why-card-text">From the moment you arrive, you're enveloped in an atmosphere of calm, beauty, and refinement. Our clinics are sanctuaries designed for your well-being.</div>
+      </div>
+      <div class="why-card reveal" style="transition-delay:0.3s">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        </div>
+        <div class="why-card-title">Exceptional Results</div>
+        <div class="why-card-text">Our 5-star reviews and thousands of transformed clients speak for themselves. We measure success not by treatments performed, but by lives elevated.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ LOCATIONS -->
+<section id="locations">
+  <div class="container">
+    <div class="locations-header reveal">
+      <span class="eyebrow">Find Us</span>
+      <h2 class="section-title">Our <em>Locations</em></h2>
+      <div class="gold-divider"></div>
+      <p class="section-subtitle" style="margin:0 auto;text-align:center">Two exceptional clinics serving Nevada's most discerning clients.</p>
+    </div>
+    <div class="locations-grid">
+      <div class="location-card reveal-left">
+        <div class="location-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206253.56296038785!2d-115.29170015!3d36.17497165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x9a5e5f40c3f3a2ff!2sLas+Vegas%2C+NV!5e0!3m2!1sen!2sus!4v1700000000000"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Las Vegas Location">
+          </iframe>
+        </div>
+        <div class="location-body">
+          <h3 class="location-name">Las Vegas Flagship Clinic</h3>
+          <ul class="location-details">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              3800 Howard Hughes Pkwy, Suite 250, Las Vegas, NV 89169
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.09a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+              (702) 555-0192
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Mon–Fri: 9am–7pm &nbsp;|&nbsp; Sat: 9am–5pm &nbsp;|&nbsp; Sun: Closed
+            </li>
+          </ul>
+          <a href="https://maps.google.com" target="_blank" class="btn-gold"><span>Get Directions</span></a>
+        </div>
+      </div>
+
+      <div class="location-card reveal-right">
+        <div class="location-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194033.10038742065!2d-119.93492245!3d39.52916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809940bcdb6d0bf9%3A0xdb60ec59e2da0b3d!2sReno%2C+NV!5e0!3m2!1sen!2sus!4v1700000000000"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Reno Location">
+          </iframe>
+        </div>
+        <div class="location-body">
+          <h3 class="location-name">Reno Luxury Clinic</h3>
+          <ul class="location-details">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              1 South Lake Street, Suite 400, Reno, NV 89501
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.09a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+              (775) 555-0148
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Mon–Fri: 9am–6pm &nbsp;|&nbsp; Sat: 10am–4pm &nbsp;|&nbsp; Sun: Closed
+            </li>
+          </ul>
+          <a href="https://maps.google.com" target="_blank" class="btn-gold"><span>Get Directions</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ FEATURED TREATMENTS -->
+<section id="treatments">
+  <div class="container">
+    <div class="treatments-header reveal">
+      <span class="eyebrow" style="color:var(--champagne-light)">Pricing</span>
+      <h2 class="section-title" style="color:#fff">Featured <em>Treatments</em></h2>
+      <div class="gold-divider"></div>
+      <p class="section-subtitle">Starting prices shown. Exact pricing determined during your personalized consultation.</p>
+    </div>
+    <div class="treatments-grid">
+      <div class="treatment-card reveal">
+        <div class="treatment-card-name">Botox</div>
+        <div class="treatment-card-desc">Smooth wrinkles and prevent new lines with our precision injection technique.</div>
+        <span class="treatment-price-label">Starting From</span>
+        <span class="treatment-price">$12/unit</span>
+        <a href="#contact" class="btn-gold"><span>Book Now</span></a>
+      </div>
+      <div class="treatment-card reveal" style="transition-delay:0.1s">
+        <div class="treatment-card-name">Lip Fillers</div>
+        <div class="treatment-card-desc">Achieve luscious, naturally full lips with artisan-level enhancement.</div>
+        <span class="treatment-price-label">Starting From</span>
+        <span class="treatment-price">$650</span>
+        <a href="#contact" class="btn-gold"><span>Book Now</span></a>
+      </div>
+      <div class="treatment-card reveal" style="transition-delay:0.2s">
+        <div class="treatment-card-name">Weight Loss Program</div>
+        <div class="treatment-card-desc">Physician-supervised transformation with the latest GLP-1 medications.</div>
+        <span class="treatment-price-label">Starting From</span>
+        <span class="treatment-price">$299/mo</span>
+        <a href="#contact" class="btn-gold"><span>Book Now</span></a>
+      </div>
+      <div class="treatment-card reveal" style="transition-delay:0.1s">
+        <div class="treatment-card-name">IV Therapy</div>
+        <div class="treatment-card-desc">Bespoke vitamin infusions for energy, beauty, immunity, and recovery.</div>
+        <span class="treatment-price-label">Starting From</span>
+        <span class="treatment-price">$149</span>
+        <a href="#contact" class="btn-gold"><span>Book Now</span></a>
+      </div>
+      <div class="treatment-card reveal" style="transition-delay:0.2s">
+        <div class="treatment-card-name">Skin Tightening</div>
+        <div class="treatment-card-desc">Non-invasive radiofrequency to firm, lift, and resurface aging skin.</div>
+        <span class="treatment-price-label">Starting From</span>
+        <span class="treatment-price">$799</span>
+        <a href="#contact" class="btn-gold"><span>Book Now</span></a>
+      </div>
+      <div class="treatment-card reveal" style="transition-delay:0.3s">
+        <div class="treatment-card-name">Facial Rejuvenation</div>
+        <div class="treatment-card-desc">A signature comprehensive facial treatment combining multiple modalities.</div>
+        <span class="treatment-price-label">Starting From</span>
+        <span class="treatment-price">$450</span>
+        <a href="#contact" class="btn-gold"><span>Book Now</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="testimonials-header reveal">
+      <span class="eyebrow">Client Love</span>
+      <h2 class="section-title">What Our Clients <em>Say</em></h2>
+      <div class="gold-divider"></div>
+      <p class="section-subtitle">Over 5,000 transformed clients and counting. Their stories inspire everything we do.</p>
+    </div>
+    <div class="testimonials-track-wrap">
+      <div class="testimonials-track" id="testimonialsTrack">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">"Aura Wellness LV changed the way I see myself. My injector listened to every concern and delivered exactly what I envisioned — I look refreshed, not overdone. Absolute perfection."</p>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-author">
+            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80&auto=format&fit=crop&crop=face" alt="Sarah M.">
+            <div>
+              <div class="testimonial-name">Sarah M.</div>
+              <div class="testimonial-location">Las Vegas, NV</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">"I've tried other med spas in Vegas and nothing comes close. The luxury environment, the expertise, the results — Aura is in a completely different league. My confidence has never been higher."</p>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-author">
+            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80&auto=format&fit=crop&crop=face" alt="Jessica R.">
+            <div>
+              <div class="testimonial-name">Jessica R.</div>
+              <div class="testimonial-location">Henderson, NV</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">"The weight loss program has been life-changing. Down 42 pounds in 5 months with physician oversight the entire time. The team at Aura genuinely cares about your long-term health."</p>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-author">
+            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80&auto=format&fit=crop&crop=face" alt="Amanda K.">
+            <div>
+              <div class="testimonial-name">Amanda K.</div>
+              <div class="testimonial-location">Las Vegas, NV</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">"From the moment you walk in, you feel like royalty. The décor, the staff, the treatments — everything exceeds expectations. My PDO thread lift took 10 years off my face. Simply incredible."</p>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-author">
+            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80&auto=format&fit=crop&crop=face" alt="Diana L.">
+            <div>
+              <div class="testimonial-name">Diana L.</div>
+              <div class="testimonial-location">Reno, NV</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">"I was nervous about getting fillers for the first time, but the team made me feel so comfortable. The results are natural, subtle, and exactly what I wanted. I'm a client for life."</p>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-author">
+            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?w=100&q=80&auto=format&fit=crop&crop=face" alt="Michelle T.">
+            <div>
+              <div class="testimonial-name">Michelle T.</div>
+              <div class="testimonial-location">Summerlin, NV</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials-controls">
+      <button class="testimonials-btn" onclick="moveCarousel(-1)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="testimonials-dots" id="testimonialsDots">
+        <div class="dot active" onclick="goToSlide(0)"></div>
+        <div class="dot" onclick="goToSlide(1)"></div>
+        <div class="dot" onclick="goToSlide(2)"></div>
+      </div>
+      <button class="testimonials-btn" onclick="moveCarousel(1)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="process-header reveal">
+      <span class="eyebrow">How It Works</span>
+      <h2 class="section-title">Your Journey to <em>Transformation</em></h2>
+      <div class="gold-divider"></div>
+      <p class="section-subtitle" style="margin:0 auto;text-align:center">Four simple steps to reveal your most radiant self.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="process-step-num">I</div>
+        <div class="process-step-title">Consultation</div>
+        <div class="process-step-text">Begin with a complimentary one-on-one consultation where we listen deeply to your goals, assess your unique anatomy, and answer every question.</div>
+      </div>
+      <div class="process-step reveal" style="transition-delay:0.15s">
+        <div class="process-step-num">II</div>
+        <div class="process-step-title">Custom Treatment Plan</div>
+        <div class="process-step-text">Your provider crafts a fully personalized treatment roadmap designed around your unique needs, timeline, and aesthetic vision.</div>
+      </div>
+      <div class="process-step reveal" style="transition-delay:0.3s">
+        <div class="process-step-num">III</div>
+        <div class="process-step-title">Treatment Session</div>
+        <div class="process-step-text">Relax in our luxurious treatment suites while our skilled practitioners deliver your tailored treatment with the utmost precision and care.</div>
+      </div>
+      <div class="process-step reveal" style="transition-delay:0.45s">
+        <div class="process-step-num">IV</div>
+        <div class="process-step-title">Follow-up Care</div>
+        <div class="process-step-text">We remain by your side beyond your appointment — monitoring results, answering questions, and optimizing your plan for long-lasting beauty.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ CTA BANNER -->
+<section id="cta-banner">
+  <div class="cta-banner-bg"></div>
+  <div class="container">
+    <div class="cta-banner-content reveal">
+      <span class="eyebrow" style="color:var(--champagne-light)">Ready to Begin?</span>
+      <h2 class="cta-banner-title">Look and Feel<br>Your <em>Best</em></h2>
+      <p class="cta-banner-sub">Your transformation begins with a single conversation. Our experts are ready to guide you.</p>
+      <a href="#contact" class="btn-gold"><span>Book Your Consultation Today</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-header reveal">
+      <span class="eyebrow">Common Questions</span>
+      <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
+      <div class="gold-divider"></div>
+      <p class="section-subtitle" style="margin:0 auto;text-align:center">Everything you need to know before your first visit.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          How long do Botox and dermal filler results last?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Botox results typically last 3–4 months, while dermal fillers can last anywhere from 6 to 24 months depending on the product and treatment area. Factors such as your metabolism, lifestyle, and the specific product used will influence longevity. Our practitioners will discuss realistic expectations during your consultation.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Is there any downtime after treatments?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Most of our treatments require little to no downtime. Botox and filler treatments may cause mild redness or swelling for 24–48 hours. PDO threads and laser treatments may require 3–7 days of recovery. IV therapy has zero downtime. We provide detailed aftercare instructions for every procedure.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Are your treatments safe? What products do you use?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Absolutely. We exclusively use FDA-approved products from premium brands including Botox, Juvederm, Restylane, and Sculptra. All treatments are performed by board-certified practitioners in a fully licensed medical facility. Your safety is our highest priority.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          How does your Medical Weight Loss program work?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Our medical weight loss program begins with comprehensive bloodwork, body composition analysis, and a physician evaluation. Based on your results, we create a personalized plan that may include GLP-1 medications (Semaglutide/Tirzepatide), nutritional guidance, and ongoing monitoring to ensure safe, sustainable weight loss.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Do you offer payment plans or financing?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes, we partner with CareCredit and Cherry Financing to make luxury aesthetic care accessible. 0% interest payment plans are available for qualified applicants. Ask our team about our VIP membership program for additional savings on regular treatments.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          What should I do to prepare for my first appointment?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Arrive with a clean face free of makeup. Avoid blood thinners (aspirin, ibuprofen, fish oil) for 7 days before injectable treatments. Stay well-hydrated and avoid alcohol 24 hours prior. Bring any photos of results you admire to help communicate your goals. Most importantly — come ready to be pampered.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal-left">
+        <img class="contact-img" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=85&auto=format&fit=crop" alt="Book Your Consultation at Aura Wellness LV" loading="lazy">
+      </div>
+      <div class="reveal-right">
+        <span class="eyebrow">Contact Us</span>
+        <h2 class="contact-form-title">Schedule Your <em style="font-style:italic;color:var(--champagne)">Consultation</em></h2>
+        <p class="contact-form-sub">Your journey to radiant beauty begins here. Fill out the form below and a member of our team will contact you within one business day.</p>
+        <form onsubmit="handleFormSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(702) 000-0000">
+            </div>
+            <div class="form-group">
+              <label for="location">Preferred Location</label>
+              <select id="location" name="location">
+                <option value="">Select Location</option>
+                <option>Las Vegas Clinic</option>
+                <option>Reno Clinic</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">Service of Interest</label>
+            <select id="service" name="service">
+              <option value="">Select a Service</option>
+              <option>Botox & Neuromodulators</option>
+              <option>Dermal Fillers</option>
+              <option>Lip Fillers</option>
+              <option>PDO Thread Lift</option>
+              <option>Medical Weight Loss</option>
+              <option>IV Therapy</option>
+              <option>Laser Treatments</option>
+              <option>Skin Rejuvenation</option>
+              <option>Microneedling</option>
+              <option>PRP Therapy</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your goals, questions, or preferred appointment times..."></textarea>
+          </div>
+          <button type="submit" class="btn-gold" style="width:100%;justify-content:center;padding:18px;">
+            <span>Schedule Consultation</span>
+          </button>
+        </form>
+        <div id="form-success" style="display:none;margin-top:24px;padding:20px;background:var(--champagne-pale);border-left:3px solid var(--champagne);font-size:0.9rem;color:var(--text-mid);line-height:1.7;">
+          ✓ Thank you! We've received your request and will be in touch within one business day.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ INSTAGRAM -->
+<section id="instagram">
+  <div class="container">
+    <div class="instagram-header reveal">
+      <span class="eyebrow">Follow Our Journey</span>
+      <h2 class="section-title">Beauty <em>Inspiration</em></h2>
+      <div class="instagram-handle">@aurawellnesslv</div>
+    </div>
+    <div class="instagram-grid">
+      <div class="instagram-item">
+        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=300&q=80&auto=format&fit=crop" alt="Aura Instagram" loading="lazy">
+        <div class="instagram-item-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path fill="#2C2825" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#2C2825" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="instagram-item">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=300&q=80&auto=format&fit=crop" alt="Aura Instagram" loading="lazy">
+        <div class="instagram-item-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path fill="#2C2825" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></div>
+      </div>
+      <div class="instagram-item">
+        <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=300&q=80&auto=format&fit=crop" alt="Aura Instagram" loading="lazy">
+        <div class="instagram-item-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path fill="#2C2825" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></div>
+      </div>
+      <div class="instagram-item">
+        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=300&q=80&auto=format&fit=crop" alt="Aura Instagram" loading="lazy">
+        <div class="instagram-item-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path fill="#2C2825" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></div>
+      </div>
+      <div class="instagram-item">
+        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=300&q=80&auto=format&fit=crop" alt="Aura Instagram" loading="lazy">
+        <div class="instagram-item-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path fill="#2C2825" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></div>
+      </div>
+      <div class="instagram-item">
+        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=300&q=80&auto=format&fit=crop" alt="Aura Instagram" loading="lazy">
+        <div class="instagram-item-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path fill="#2C2825" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-logo-script">Aura Wellness LV</span>
+        <span class="footer-logo-sub">Medical Aesthetics & Wellness</span>
+        <p class="footer-desc">Nevada's premier destination for advanced medical aesthetics, wellness treatments, and personalized luxury care. Serving Las Vegas and Reno.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="#" class="footer-social" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="footer-social" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;opacity:0.7"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.26 8.26 0 0 0 4.84 1.56V6.8a4.85 4.85 0 0 1-1.07-.11z"/></svg>
+          </a>
+          <a href="#" class="footer-social" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" stroke="none" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Botox & Neuromodulators</a></li>
+          <li><a href="#services">Dermal Fillers</a></li>
+          <li><a href="#services">Lip Fillers</a></li>
+          <li><a href="#services">PDO Thread Lift</a></li>
+          <li><a href="#services">Medical Weight Loss</a></li>
+          <li><a href="#services">IV Therapy</a></li>
+          <li><a href="#services">Laser Treatments</a></li>
+          <li><a href="#services">Microneedling</a></li>
+          <li><a href="#services">PRP Therapy</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Before & After Gallery</a></li>
+          <li><a href="#testimonials">Client Reviews</a></li>
+          <li><a href="#locations">Our Locations</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Book Consultation</a></li>
+          <li><a href="#">Gift Cards</a></li>
+          <li><a href="#">Financing</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact Information</div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>3800 Howard Hughes Pkwy, Ste 250<br>Las Vegas, NV 89169</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>1 South Lake Street, Ste 400<br>Reno, NV 89501</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.09a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+          <span>LV: (702) 555-0192<br>Reno: (775) 555-0148</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>hello@aurawellnesslv.com</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">© 2026 Aura Wellness LV. All Rights Reserved.</span>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">HIPAA Notice</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ─── HEADER SCROLL ───
+  const header = document.getElementById('header');
+  const logoScript = document.getElementById('logoScript');
+  const logoSub = document.getElementById('logoSub');
+  const mainNav = document.getElementById('mainNav');
+  const headerCTA = document.getElementById('headerCTA');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+      header.classList.add('scrolled');
+      logoScript.classList.remove('logo-script-white');
+      logoSub.classList.remove('logo-sub-white');
+      mainNav.classList.remove('nav-white');
+      headerCTA.style.display = 'inline-flex';
+    } else {
+      header.classList.remove('scrolled');
+      logoScript.classList.add('logo-script-white');
+      logoSub.classList.add('logo-sub-white');
+      mainNav.classList.add('nav-white');
+      headerCTA.style.display = 'none';
+    }
+  }, { passive: true });
+
+  // ─── HERO PARALLAX ───
+  const heroBg = document.getElementById('heroBg');
+  setTimeout(() => heroBg.classList.add('loaded'), 100);
+
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    heroBg.style.transform = `translateY(${scrolled * 0.3}px)`;
+  }, { passive: true });
+
+  // ─── SCROLL REVEAL ───
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  // ─── MOBILE NAV ───
+  function openMobileNav() {
+    document.getElementById('mobileNav').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileNav() {
+    document.getElementById('mobileNav').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // ─── FAQ ACCORDION ───
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // ─── TESTIMONIALS CAROUSEL ───
+  let currentSlide = 0;
+  const track = document.getElementById('testimonialsTrack');
+  const dots = document.querySelectorAll('.testimonials-dots .dot');
+
+  function getVisibleCards() {
+    const w = window.innerWidth;
+    if (w < 600) return 1;
+    if (w < 900) return 2;
+    return 3;
+  }
+
+  function getTotalSlides() {
+    const cards = track.children.length;
+    return Math.max(0, cards - getVisibleCards());
+  }
+
+  function updateCarousel() {
+    const cardWidth = track.querySelector('.testimonial-card').offsetWidth + 24;
+    track.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide % dots.length));
+  }
+
+  function moveCarousel(dir) {
+    const total = getTotalSlides();
+    currentSlide = Math.max(0, Math.min(currentSlide + dir, total));
+    updateCarousel();
+  }
+
+  function goToSlide(i) {
+    currentSlide = i;
+    updateCarousel();
+  }
+
+  window.addEventListener('resize', updateCarousel);
+  window.addEventListener('load', updateCarousel);
+
+  // Auto-advance
+  setInterval(() => moveCarousel(1), 5000);
+
+  // ─── LIGHTBOX ───
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+
+  // ─── FORM ───
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    document.getElementById('form-success').style.display = 'block';
+    e.target.reset();
+    setTimeout(() => document.getElementById('form-success').style.display = 'none', 6000);
+  }
+
+  // ─── SMOOTH SCROLL ───
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
